@@ -1,0 +1,1 @@
+set OPENAI_API_KEY=<string (secret key for openai)>
