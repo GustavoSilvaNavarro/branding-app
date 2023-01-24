@@ -1,6 +1,8 @@
 /api-venv
 /.env.bat
-/__pycache__
+/app/__pycache__
+
+*.zip
 
 /package-lock.json
 /coverage
