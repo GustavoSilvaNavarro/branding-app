@@ -1,11 +1,20 @@
 from fastapi import FastAPI, HTTPException
 from appbot import generate_branding_snippet, generate_keywords
 from mangum import Mangum
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 handler = Mangum(app)
 
 MAX_INPUT_LENGTH = 20
+
+app.add_middleware(
+  CORSMiddleware,
+  allow_origins=['http://localhost:3000'],
+  allow_credentials=True,
+  allow_methods=["*"],
+  allow_headers=["*"],
+)
 
 def validate_input_length(prompt: str):
   if len(prompt) >= MAX_INPUT_LENGTH:
