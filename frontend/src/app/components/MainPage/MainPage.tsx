@@ -9,8 +9,8 @@ import { Snippet } from '../../types/app-types';
 
 export const MainPage = (): JSX.Element => {
   const [prompt, setPrompt] = useState('');
-  const [snippet, setSnippet] = useState('This is a mock snippet for testing and stuff');
-  const [keywords, setKeywords] = useState<Array<string>>(['javascript', 'mock', 'test']);
+  const [snippet, setSnippet] = useState('');
+  const [keywords, setKeywords] = useState<Array<string>>([]);
   const [hasResult, setHasResult] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
