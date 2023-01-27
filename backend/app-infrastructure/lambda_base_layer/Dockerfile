@@ -1,25 +1,3 @@
-# FROM amazonlinux:2
-
-# # INSTALLING PYTHON
-# RUN yum install -y python37 && \
-#     yum install -y python3-pip && \
-#     yum install -y zip && \
-#     yum clean all
-
-# # SETUP PIP AND VENV
-# RUN python3.7 -m pip install --upgrade pip && \
-#     python3.7 -m pip install virtualenv
-# RUN python3.7 -m venv base
-# RUN source base/bin/activate
-
-# # INSTALL DEPENDENCIES
-# COPY requirements.txt .
-# RUN pip install -r requirements.txt -t ./python
-
-# # ZIP IT UP FOR DEPLOYMENT
-# RUN zip -r layer.zip ./python/
-# ENTRYPOINT [ "/bin/bash", "-l" ]
-
 FROM ubuntu:focal
 
 # UPDATE AND UPGRADE UBUNTU PACKAGES

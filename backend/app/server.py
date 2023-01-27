@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 handler = Mangum(app)
 
-MAX_INPUT_LENGTH = 20
+MAX_INPUT_LENGTH = 32
 
 app.add_middleware(
   CORSMiddleware,
